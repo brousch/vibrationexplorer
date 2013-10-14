@@ -1,0 +1,21 @@
+#:kivy 1.7.2
+
+<VibrationExplorer>:
+    orientation: 'vertical'
+    Label:
+        text: 'Vibration Explorer'
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: 'Pattern:'
+        TextInput:
+            multiline: False
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: 'Repeat:'
+        TextInput:
+            multiline: False
+            text: '-1'
+    Button:
+        text: 'Try It'
