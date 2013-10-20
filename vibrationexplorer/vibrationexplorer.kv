@@ -9,9 +9,17 @@
         Label:
             text: 'Pattern:'
         TextInput:
-            id: pattern
+            id: p_on
             multiline: False
-            text: '0,'
+            text: '1000'
+        TextInput:
+            id: p_off
+            multiline: False
+            text: '1000'
+        TextInput:
+            id:p_repeat
+            multiline: False
+            text: '1'
     BoxLayout:
         orientation: 'horizontal'
         Label:
@@ -21,5 +29,5 @@
             text: '-1'
     Button:
         text: 'Try It'
-        on_press: root.do_vibrate(pattern.text)
+        on_press: root.do_vibrate('0,'+((p_on.text+','+p_off.text+',')*int(p_repeat.text))[:-1])
 

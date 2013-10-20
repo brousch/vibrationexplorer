@@ -21,11 +21,8 @@ class VibrationExplorer(BoxLayout):
         activity = PythonActivity.mActivity
         vibrator = activity.getSystemService(Context.VIBRATOR_SERVICE)
         if vibrator.hasVibrator():
-#            if pattern.isdigit():
-#                pat = long(pattern)
-#            else:
-#                pat = [long(p) for p in pattern.split(',')]
-            pat = [0,500,500,500]
+            pat = [int(p) for p in pattern.split(',')]
+            #pat = [0,500,500,500]
             vibrator.vibrate(pat, -1)
         else:
             popup = Popup(title='No Vibrator',
